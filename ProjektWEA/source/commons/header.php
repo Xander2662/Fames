@@ -1,4 +1,5 @@
-<nav>
+            <link rel="stylesheet" href="../assets/header.css">
+            <nav>
                 <a class="logo" href="index.php">Fames</a>
                 <form>
                     <div class="search">

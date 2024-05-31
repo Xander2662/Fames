@@ -23,4 +23,3 @@ if (mysqli_num_rows($result) > 0) {
 
 // Close the connection
 mysqli_close($con);
-?>
