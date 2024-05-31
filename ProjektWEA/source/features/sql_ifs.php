@@ -18,26 +18,27 @@ a potom odebíraní postů (taktéž rozděleno), k tomuto i bude navázáno rep
 protože kdyby se to stalo u klienta, mohlo by se stát že někdo jiný už dá v tu chvíli like, a tudíž se ty data ztratí
 */
 
-function validate($data){
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-  return $data; 
-  }
+function validate($data)
+{
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
 
-  // $db_site = "md202.wedos.net";
-  // $db_user = "a93646_wrubel";
-  // $db_password = "tmxPsqW2";
-  // $db_name = "d93646_wrubel";
+// $db_site = "md202.wedos.net";
+// $db_user = "a93646_wrubel";
+// $db_password = "tmxPsqW2";
+// $db_name = "d93646_wrubel";
 
-  $db_site = "localhost";
-  $db_user = "root";
-  $db_password = "";
-  $db_name = "fashion_in_games";
+$db_site = "localhost";
+$db_user = "root";
+$db_password = "";
+$db_name = "fashion_in_games";
 
 $con = mysqli_connect($db_site, $db_user, $db_password, $db_name);
 
-if(!$con){
-    echo "Spojení se nezdařilo.";
+if (!$con) {
+  header("Location: ../commons/index.php?err=databáze nebyla připojena");
 }
 ?>

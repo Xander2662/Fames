@@ -13,12 +13,14 @@ if (!$result) {
 if (mysqli_num_rows($result) > 0) {
   $row = mysqli_fetch_assoc($result);
   if ($row["password"] === md5($password)) {
-    Header("Location: index.php");
+    Header("Location: ../commons/index.php");
   } else {
-    Header("Location: login.php?err=Špatné heslo");
+    Header("Location: ../commons/login.php?err=Špatné heslo");
   }
 } else {
-    Header("Location: login.php?err=Uživatel nebyl nalezen");
+    echo "username: ".$username;
+    echo $_POST["email"];
+    echo $password;
 }
 
 // Close the connection
