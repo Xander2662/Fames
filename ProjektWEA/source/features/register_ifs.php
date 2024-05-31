@@ -1,5 +1,5 @@
 <?php
-include('sql.php');
+include('sql_ifs.php');
 if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['repeat-password']) && isset($_POST['email'])){
   $username = validate($_POST['username']);
   $password = validate($_POST['password']);

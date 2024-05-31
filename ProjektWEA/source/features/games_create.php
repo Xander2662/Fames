@@ -1,5 +1,5 @@
 <?php
-include('sql.php');
+include('sql_ifs.php');
 $name = validate($_POST['name']);
 $color = validate($_POST['color']);
 $info = validate($_POST['info']);

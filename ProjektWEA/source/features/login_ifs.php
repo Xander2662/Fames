@@ -1,5 +1,5 @@
 <?php
-include('sql.php');
+include('sql_ifs.php');
 $username= mysqli_real_escape_string($con, $_POST["username"]);
 $email= mysqli_real_escape_string($con, $_POST["email"]);
 $password= mysqli_real_escape_string($con, $_POST["password"]);

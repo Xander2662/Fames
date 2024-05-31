@@ -25,10 +25,15 @@ function validate($data){
   return $data; 
   }
 
-  $db_site = "md202.wedos.net";
-  $db_user = "a93646_wrubel";
-  $db_password = "tmxPsqW2";
-  $db_name = "d93646_wrubel";
+  // $db_site = "md202.wedos.net";
+  // $db_user = "a93646_wrubel";
+  // $db_password = "tmxPsqW2";
+  // $db_name = "d93646_wrubel";
+
+  $db_site = "localhost";
+  $db_user = "root";
+  $db_password = "";
+  $db_name = "fashion_in_games";
 
 $con = mysqli_connect($db_site, $db_user, $db_password, $db_name);
 

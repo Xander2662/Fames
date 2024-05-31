@@ -1,5 +1,5 @@
 <?php
-include('sql.php');
+include('sql_ifs.php');
 $name = validate($_POST['name']);
 $result = mysqli_query($con, $sql);
 if(empty($name)){
