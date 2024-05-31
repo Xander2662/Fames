@@ -7,12 +7,12 @@
                         <input class="search-input" type="search" placeholder="Search">
                     </div>
                 </form>
-                <ul>
+                <ul style="text-align: left;">
                     <li><a href="#">Games</a></li>
-                    <li><a href="#">Mods</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Media</a></li>
-                    <li><a href="#">Community</a></li>
+                </ul>
+                <ul style="text-align: right;">
+                    
+                    <li><a  href="#">About us</a></li>
                     <li><a href="#">Support</a></li>
                 </ul>
 
@@ -28,7 +28,7 @@
                         <hr>
 
                         <a href="#" class="sub-menu-link">
-                            <img src="images/settings.png">
+                            <img src="../../public/settings.png">
                             <p>Settings</p>
                         </a>
                         <a href="#" class="sub-menu-link">

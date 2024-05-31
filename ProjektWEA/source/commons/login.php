@@ -13,9 +13,6 @@
         <?php include 'header.php' ?>
 
             <div class="wrapper">
-                <span class="icon-close">
-                    <ion-icon name="close-outline"></ion-icon>
-                </span>
     
                 <div class="form-box login">
                     <h2>Login</h2>
