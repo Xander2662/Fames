@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="../assets/index.css">
-        <link rel="stylesheet" href="../assets/cardstyle.css">
+        <link rel="stylesheet" href="../assets/cardCreator.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
@@ -96,56 +96,7 @@
 
         </script>
         
-        <script>
-        const canvas = document.getElementById('myCanvas');
-        const obrazek = document.getElementById('obrazek');
-        var context = canvas.getContext('2d');
-        var x=0,y=0;
-      var imageObj = new Image();
-      var source;
-      obrazek.addEventListener("change", function () {
-       getImgData();
-       context.drawImage(imageObj,0,0);      
-            });
-      
-
-            function getImgData() {
-  const files = obrazek.files[0];
-  if (files) {
-    const fileReader = new FileReader();
-    fileReader.readAsDataURL(files);
-    fileReader.addEventListener("load", function () {
-
-      source=this.result;
-      imageObj.src = source;
-    });    
-  }
-}
-      imageObj.onload = function() {
-          context.drawImage(imageObj,0,0);
-          var data = canvas.toDataURL("image/jpeg");
-          document.getElementById("download").href =data;
-          console.log(imageObj.naturalWidth);
-       console.log(imageObj.naturalHeight);
-       document.getElementById('x').setAttribute("min",-imageObj.naturalWidth+720);
-       document.getElementById('y').setAttribute("min",-imageObj.naturalHeight+1050);
-          
-  }; 
- 
-  document.getElementById("x").oninput = function() {
-    var data = canvas.toDataURL("image/jpeg");
-    document.getElementById("download").href =data;
-    x=this.value;
-   context.drawImage(imageObj,x,y);
-  }
-  document.getElementById("y").oninput = function() {
-    var data = canvas.toDataURL("image/jpeg");
-    document.getElementById("download").href =data;
-    y=this.value;
-   context.drawImage(imageObj,x,y);
-  }
-
-      </script>
+        <script  src="./wrapper.js"></script>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     </body>
