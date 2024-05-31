@@ -1,0 +1,124 @@
+body {
+    background-color: brown;
+    
+}
+
+.card{
+    margin-left: 10%;
+    background-color: green;
+    height: 1500px;
+    width: 900px;    
+    border: 2px red solid;
+    position: relative;
+    border-radius: 1%;
+    
+}
+
+.card > *
+{
+    margin-top: 2%;
+}
+
+.picture{
+
+    display: block;
+    padding: 2px;
+    margin-left: 10%;
+    background-color: green;
+    width: 80%;
+    height: 70%;
+
+    border: 2px red solid;
+    
+
+}
+canvas{
+
+    display: block;
+    padding: 2px;
+    margin-left: 10%;
+
+ 
+
+    border: 2px red solid;
+    
+
+}
+.like{
+    float: left;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    display: block;
+    background: rgb(228, 190, 190);
+    border-radius: 50%;
+    height: 10%;
+    aspect-ratio: 1;
+    margin: 0;
+    margin-left: 80%;
+    margin-top: 20%;
+    border: 2px red solid;
+      
+}
+.title
+{   
+    
+    padding-top: 1%;
+    width: 90%;
+    margin-left: 5%;
+    border: 2px red solid;
+    text-align: center;
+    padding-bottom: 1%;
+    font-size:x-large;
+}
+
+.like > p{
+    margin-top: 38%;
+}
+
+.text
+{   
+
+    height: 10%;
+    max-width: 90%;
+    margin-left: 5%;
+    border: 2px red solid;
+    
+}
+textarea.text
+{   
+
+    height: 15%;
+    width: 90%;
+    margin-left: 5%;
+    border: 2px red solid;
+    
+}
+.gem{
+    float: left;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    display: block;
+    background: rgb(228, 190, 190);
+    border-radius: 50%;
+    height: 7%;
+    aspect-ratio: 0.5;
+    margin: 0;
+    margin-left: 48%;
+    margin-top: 112%;
+    border: 2px red solid;
+      
+}
+.iden1
+{
+    display: inline;
+    margin-left: 2%;
+    float: left;
+}
+.iden2
+{
+    display: inline;
+    float: right;
+    margin-right: 2%;
+}
