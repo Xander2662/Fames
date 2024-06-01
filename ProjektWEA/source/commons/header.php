@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" href="../assets/header.css">
 <nav>
     <a class="logo" href="index.php">Fames</a>
@@ -7,10 +8,13 @@
             <input class="search-input" type="search" placeholder="Search">
         </div>
     </form>
+    <?php 
+    if(isset($_SESSION["User"]))    echo'
     <ul style="text-align: left;">
-        <li><a href="#">Games</a></li>
+    
         <li><a href="#">My collection</a></li>
-    </ul>
+    </ul>';
+    ?>
     <ul style="text-align: right;">
 
         <li><a href="#">About us</a></li>
@@ -44,7 +48,11 @@
                 <img src="../../public/logout.png">
                 <p>Logout</p>
             </a>';
-
+            if($_SESSION['User'] -> getPermission()==0) {
+                echo '<hr><a href="../CRUD/admin_panel.php" class="sub-menu-link">
+                <p>Admin panel :)</p>
+            </a>';
+            }
             } else
                 echo '<a href="login.php" class="sub-menu-link">
                 <img src="../../public/logout.png">

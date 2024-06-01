@@ -1,5 +1,8 @@
 
 <?php
+if($_SESSION['User'] -> getPermission()===1) {
+header("../../commons/index.php");
+}
 require '../../features/sql_ifs.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
