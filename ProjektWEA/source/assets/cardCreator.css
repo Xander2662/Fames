@@ -1,17 +1,37 @@
-body {
-    background-color: brown;
+input
+{
+    display: block;
+}
+.inputs
+{
+    float: left;
+   margin-top: 200px;
+   margin-left: 50px;
+    
+   
+
     
 }
 
+.inputs > *
+{
+    margin-top: 20px;
+}
+
+.home
+{
+    border: 2px red solid;
+}
 .card{
     margin-left: 10%;
+    margin-top: 50px;
     background-color: green;
-    height: 1500px;
+    height: 1400px;
     width: 900px;    
     border: 2px red solid;
     position: relative;
     border-radius: 1%;
-    
+    float: left;
 }
 
 .card > *
@@ -19,27 +39,12 @@ body {
     margin-top: 2%;
 }
 
-.picture{
-
-    display: block;
-    padding: 2px;
-    margin-left: 10%;
-    background-color: green;
-    width: 80%;
-    height: 70%;
-
-    border: 2px red solid;
-    
-
-}
 canvas{
 
     display: block;
     padding: 2px;
     margin-left: 10%;
-
- 
-
+    background-color: black;
     border: 2px red solid;
     
 
@@ -107,8 +112,7 @@ textarea.text
     margin: 0;
     margin-left: 48%;
     margin-top: 112%;
-    border: 2px red solid;
-      
+    border: 2px red solid;     
 }
 .iden1
 {

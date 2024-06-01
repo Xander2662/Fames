@@ -37,6 +37,7 @@ const canvas = document.getElementById('myCanvas');
     var data = canvas.toDataURL("image/jpeg");
     document.getElementById("download").href =data;
     x=this.value;
+    console.log(  document.getElementById("games").value);
    context.drawImage(imageObj,x,y);
   }
   document.getElementById("y").oninput = function() {

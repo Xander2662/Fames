@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,16 +7,63 @@
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="../assets/index.css">
+        <link rel="stylesheet" href="../assets/header.css">
         <link rel="stylesheet" href="../assets/cardCreator.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>¨
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     </head>
+    <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>
+    <script>
+  $( function() {
+    var availableGames = [
+        <?php
+            include "../features/getGames.php";
+            foreach ($name as $x) {
+                echo "\"$x\",";
+              }
+        ?>        
+    ];
+    $( "#games" ).autocomplete({
+      source: availableGames
+    });
+  } );
+  </script>
     <body>
     <style>
-      
-      canvas{
-        background-color: red;
-      }
-     
+
     </style>
         <div class="hero">
             <nav>
@@ -60,30 +108,25 @@
 
             </nav>
 
-            <div class="home">        
-                <!-----------------------------------
-                *      Zde si muzes vlozit ty       *
-                *      herni karty podle sebe       *                                   
-                ------------------------------------>
-                <div class="card">  
+            <div class="home">
+            <?php
+            $key = array_search('ELDEN RING', $name);
+            echo $key;
+            ?>
+            <div class="card">  
               <input class="title" type="text">
               <div class="like"></div>
               <div class="gem"></div><canvas id="myCanvas" width="720" height="1050"></canvas>
               <textarea class="text"></textarea>
-              <p class="iden1">Cardset: </p>
-             <p class="iden2">user: </p>
-              
-
-               </div>
-                
+            </div>
+            
+            <div class="inputs">
                 <a id="download" download="img-bozi.jpeg" href="#">stahni</a>
                 <input id="obrazek" type="file" accept="image/png, image/jpeg" />
                 <input type="range"  max="0" value="0" class="slider-square" id="x">
-                <input type="range"  max="0" value="0" class="slider-square" id="y">
-
-
-
-
+                <input type="range"  max="0" value="0" class="slider-square" id="y"><label for="tags">Tags: </label>
+  <input id="games">
+            </div>   
             </div>
         </div>
         

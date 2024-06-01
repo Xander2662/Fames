@@ -6,7 +6,7 @@ if (!$result) {
     die("Query failed: " . mysqli_error($con));
   }
 
-
+  
 for($i=1;$i<=mysqli_num_rows($result); $i++) {
     $row = mysqli_fetch_array($result);
     $id[$i] = $row ['idGames'];
