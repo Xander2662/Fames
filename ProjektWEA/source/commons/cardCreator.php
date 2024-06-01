@@ -17,37 +17,6 @@
     </head>
     <script>
   $( function() {
-    var availableTags = [
-      "ActionScript",
-      "AppleScript",
-      "Asp",
-      "BASIC",
-      "C",
-      "C++",
-      "Clojure",
-      "COBOL",
-      "ColdFusion",
-      "Erlang",
-      "Fortran",
-      "Groovy",
-      "Haskell",
-      "Java",
-      "JavaScript",
-      "Lisp",
-      "Perl",
-      "PHP",
-      "Python",
-      "Ruby",
-      "Scala",
-      "Scheme"
-    ];
-    $( "#tags" ).autocomplete({
-      source: availableTags
-    });
-  } );
-  </script>
-    <script>
-  $( function() {
     var availableGames = [
         <?php
             include "../features/getGames.php";
@@ -63,7 +32,6 @@
   </script>
     <body>
     <style>
-
     </style>
         <div class="hero">
             <nav>
@@ -110,7 +78,7 @@
 
             <div class="home">
             <?php
-            $key = array_search('ELDEN RING', $name);
+            $key = array_search('DARK SOULSIII', $name);
             echo $key;
             ?>
             <div class="card">  
