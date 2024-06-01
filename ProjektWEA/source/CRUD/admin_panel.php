@@ -1,3 +1,10 @@
+<?php
+include_once("../features/User.php");
+session_start();
+if(!isset($_SESSION['User'])||$_SESSION['User'] -> getPermission()==1) {
+header("Location: ../commons/index.php");
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,6 +15,9 @@
     <div class="container">
         <h1>Admin Panel</h1>
 
+        <a href="../commons/index.php" class="sub-menu-link">
+                <p>Go back to main page</p>
+        </a>
         <div class="section">
             <h2>Game</h2>
             <ul>
