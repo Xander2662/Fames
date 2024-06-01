@@ -24,18 +24,33 @@
             <div class="user-info">
                 <a href="login.html" class="sub-menu-link"></a>
                 <img src="../../public/user.png">
-                <h3>Jmeno</h3>
+                <h3>
+                    <?php
+                    if (isset($_SESSION["User"])) {
+                        echo $_SESSION["User"]->getUsername();
+                    } else
+                        echo "Please log in";
+                    ?>
+                </h3>
             </div>
             <hr>
-
-            <a href="#" class="sub-menu-link">
+            <?php
+            if (isset($_SESSION["User"])) {
+                echo '<a href="#" class="sub-menu-link">
                 <img src="../../public/settings.png">
                 <p>Settings</p>
-            </a>
-            <a href="#" class="sub-menu-link">
+            </a>    
+            <a href="../features/logout_ifs.php" class="sub-menu-link">
                 <img src="../../public/logout.png">
                 <p>Logout</p>
-            </a>
+            </a>';
+
+            } else
+                echo '<a href="login.php" class="sub-menu-link">
+                <img src="../../public/logout.png">
+            <p>Log in</p>
+            </a>';
+            ?>
 
         </div>
     </div>

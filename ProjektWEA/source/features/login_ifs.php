@@ -12,14 +12,16 @@ if (!$result) {
 if (mysqli_num_rows($result)   > 0) {
   $row = mysqli_fetch_assoc($result);
   if ($row["password"] === md5($password)) {
+    require_once '../features/User.php';
+    session_start();
+    $_SESSION['Logged'] = true;
+    $_SESSION['User'] = new User($row['idUsers'],$row['username'],$row['permission']);
     Header("Location: ../commons/index.php");
   } else {
     Header("Location: ../commons/login.php?err=Špatné heslo");
   }
 } else {
-    echo "username: ".$username;
-    echo $_POST["email"];
-    echo $password;
+  Header("Location: ../commons/login.php?err=Účet s tímto jménem nebo emailem neexistuje");
 }
 
 // Close the connection
