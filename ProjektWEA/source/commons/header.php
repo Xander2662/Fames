@@ -9,6 +9,7 @@
     </form>
     <ul style="text-align: left;">
         <li><a href="#">Games</a></li>
+        <li><a href="#">My collection</a></li>
     </ul>
     <ul style="text-align: right;">
 
