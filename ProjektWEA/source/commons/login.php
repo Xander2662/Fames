@@ -28,16 +28,9 @@
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
-                        </span>
-                        <input type="text" name="username" >
-                        <label>Username</label>
-                    </div>
-                    <div class="input-box">
-                        <span class="icon">
-                            <ion-icon name="mail"></ion-icon>
-                        </span>
-                        <input type="email" name="email" >
-                        <label>Email</label>
+                        </span> 
+                        <input type="text" name="text" required>
+                        <label>Username or email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
