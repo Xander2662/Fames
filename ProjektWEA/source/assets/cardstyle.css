@@ -41,6 +41,7 @@
   }
 
 .card{
+    margin-top: 50px;
     margin-left: 10%;
     background-color: rgb(var(--background));
     height: 500px;
@@ -109,7 +110,7 @@
 {   
 
     height: 500px;
-    max-height:18%;
+    max-height:14%;
     max-width: 90%;
     margin-left: 5%;
     border: 2px rgb(var(--border)) solid;
