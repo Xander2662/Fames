@@ -28,14 +28,15 @@
         </div>
 
         <div class="inputs">
-        <label>Border:</label>
+        <label style="color:white;">Border:</label>
         <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" id="r">
         <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" id="g">
-        <input type="range" min="0" max="255" value="0" class="slider-square" id="b">
-        <label>Background:</label>
+        <input style="margin-bottom:20px;" type="range" min="0" max="255" value="0" class="slider-square" id="b">
+        <label style="color:white;">Background:</label>
         <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" id="r1">
         <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" id="g1">
         <input type="range" min="0" max="255" value="0" class="slider-square" id="b1">
+        <input type="button" value="submit">
             </div>   
 
         </div>

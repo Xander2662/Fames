@@ -16,13 +16,14 @@ input
  justify-content: center;
  align-items: center;
  overflow: hidden;
- height: 300px;
+ height: 250px;
  width: 200px;
 }
 
 .inputs > *
 {
     margin-top: 20px;
+    transform: translateX(25%);
 }
 
 
