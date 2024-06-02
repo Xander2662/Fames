@@ -1,0 +1,141 @@
+:root {
+    --border:0,0,0;
+    --background: 0,0,0;
+    --site: 0,0,0;
+  
+  
+  }
+
+  input
+  {
+      display: block;
+  }
+  .inputs
+  {
+    padding: 30px;
+      float: left;
+     margin-top: 200px;
+     margin-left: 50px;
+     background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  display: block;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 300px;
+  width: 200px;
+  }
+  
+  .inputs > *
+  {
+      margin-top: 20px;
+      
+    
+    transform: translateX(25%);
+  }
+
+.card{
+    margin-left: 10%;
+    background-color: rgb(var(--background));
+    height: 1500px;
+    width: 900px;    
+    border: 2px rgb(var(--border)) solid;
+    position: relative;
+    border-radius: 1%;
+    float: left;
+}
+
+.card > *
+{
+    margin-top: 2%;
+}
+
+.picture{
+
+    display: block;
+    padding: 2px;
+    margin-left: 10%;
+    background-color: rgb(var(--background));
+    width: 80%;
+    height: 70%;
+
+    border: 2px rgb(var(--border)) solid;
+    
+
+}
+.like{
+    float: left;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    display: block;
+    background: rgb(228, 190, 190);
+    border-radius: 50%;
+    height: 10%;
+    aspect-ratio: 1;
+    margin: 0;
+    margin-left: 80%;
+    margin-top: 20%;
+    border: 2px rgb(var(--border)) solid;
+      
+}
+.title
+{   
+    
+    padding-top: 1%;
+    width: 90%;
+    margin-left: 5%;
+    border: 2px rgb(var(--border)) solid;
+    text-align: center;
+    padding-bottom: 1%;
+    font-size:x-large;
+}
+
+.like > p{
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text
+{   
+
+    height: 500px;
+    max-height:18%;
+    max-width: 90%;
+    margin-left: 5%;
+    border: 2px rgb(var(--border)) solid;
+}
+.gem{
+    float: left;
+    position: absolute;
+    z-index: 1000;
+    text-align: center;
+    display: block;
+    background: rgb(228, 190, 190);
+    border-radius: 50%;
+    height: 7%;
+    aspect-ratio: 0.5;
+    margin: 0;
+    margin-left: 48%;
+    margin-top: 112%;
+    border: 2px rgb(var(--border)) solid;
+      
+}
+.iden1
+{
+    display: inline;
+    margin-left: 2%;
+    float: left;
+}
+.iden2
+{
+    display: inline;
+    float: right;
+    margin-right: 2%;
+}
