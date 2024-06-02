@@ -21,7 +21,7 @@
             <div class="title"> CARD TITLE</div>
             <div class="like"><p>50000</p></div>
             <div class="gem"></div>
-           <img class="picture" src="">
+           <img class="picture" src="../../public/user.png">
          <div class="text"></div>
          <p class="iden1">Cardset: </p>
          <p class="iden2">user: </p>
