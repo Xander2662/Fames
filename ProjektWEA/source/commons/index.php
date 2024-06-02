@@ -13,9 +13,6 @@ session_start();
     <title>Home</title>
     <link rel="stylesheet" href="../assets/index.css">
     <link rel="stylesheet" href="../assets/cardstyle.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -50,9 +47,9 @@ session_start();
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script>
 $(document).ready(function(){
-for(var i=0;i<10;i++)
+for(var i=1;i<=8;i++)
 {
-    $("#pole").append($("<div></div>").addClass("card").append($("<div></div>").addClass("title").text("CARD TITLE")).append($("<div></div>").addClass("like").append($("<p></p>").text("card"))).append($("<div></div>").addClass("gem")).append($("<img>").addClass("picture")).append($("<div></div>").addClass("text")).append($("<p></p>").addClass("iden1")).append($("<p></p>").addClass("iden2")))
+    $("#pole").append($("<div></div>").addClass("card").append($("<div></div>").addClass("title").text("test"+i)).append($("<div></div>").addClass("like").append($("<p></p>").text("0"))).append($("<div></div>").addClass("gem")).append($("<img>").addClass("picture").attr("src","../../public/usrimg/img-bozi ("+i+").jpeg")).append($("<div></div>").addClass("text")).append($("<p></p>").addClass("iden1").text("card set: WARFRAME")).append($("<p></p>").addClass("iden2").text("user: admin1")))
 }
 
 
