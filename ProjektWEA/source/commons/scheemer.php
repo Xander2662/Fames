@@ -17,7 +17,7 @@
     <div class="hero">
         <?php include 'header.php' ?>
         <div class="home">
-        <div class="card">  
+        <div class="card" style= "height: 1500px; width: 900px;">  
             <div class="title"> CARD TITLE</div>
             <div class="like"><p>50000</p></div>
             <div class="gem"></div>

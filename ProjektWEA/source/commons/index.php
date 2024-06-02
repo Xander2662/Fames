@@ -12,6 +12,10 @@ session_start();
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../assets/index.css">
+    <link rel="stylesheet" href="../assets/cardstyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -19,7 +23,7 @@ session_start();
 <body>
     <div class="hero">
         <?php include 'header.php' ?>
-        <div class="home">
+        <div class="home" id ="pole">
             <div class="intro">
                 <h1>WELCOME TO FAMES</h1>
                 <p>Tu muzem napsat nejaky text voleee</p>
@@ -44,6 +48,19 @@ session_start();
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script>
+$(document).ready(function(){
+for(var i=0;i<10;i++)
+{
+    $("#pole").append($("<div></div>").addClass("card").append($("<div></div>").addClass("title").text("CARD TITLE")).append($("<div></div>").addClass("like").append($("<p></p>").text("card"))).append($("<div></div>").addClass("gem")).append($("<img>").addClass("picture")).append($("<div></div>").addClass("text")).append($("<p></p>").addClass("iden1")).append($("<p></p>").addClass("iden2")))
+}
+
+
+$(".card").dblclick(function(){
+  $(this).hide();
+});
+});
+    </script>
 </body>
 
 </html>
