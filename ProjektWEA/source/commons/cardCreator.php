@@ -10,12 +10,16 @@
         <link rel="stylesheet" href="../assets/header.css">
         <link rel="stylesheet" href="../assets/cardCreator.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
     </head>
-    <script>
+    
+    <body>
+        <div class="hero">
+        <?php include 'header.php' ?>
+<script>
   $( function() {
     var availableGames = [
         <?php
-            include "../features/getGames.php";
             foreach ($name as $x) {
                 echo "\"$x\",";
               }
@@ -26,10 +30,6 @@
     });
   } );
   </script>
-    <body>
-        <div class="hero">
-        <?php include 'header.php' ?>
-
             <div class="home">
             <div class="card">  
               <input class="title" type="text">
@@ -39,11 +39,12 @@
             </div>
             
             <div class="inputs">
-                <a id="download" download="img-bozi.jpeg" href="#">stahni</a>
                 <input id="obrazek" type="file" accept="image/png, image/jpeg" />
                 <input type="range"  max="0" value="0" class="slider-square" id="x">
-                <input type="range"  max="0" value="0" class="slider-square" id="y"><label for="tags">Tags: </label>
-  <input id="games">
+                <input type="range"  max="0" value="0" class="slider-square"style="margin-bottom: 20px;" id="y"><label style="color:white;"  for="tags">Card set: </label>  
+                <input id="games">
+                <input type="button" value="submit">
+
             </div>   
             </div>
         </div>

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 <script>
   $( function() {
-    var availableGames = [
+    var availablesearch = [
         <?php
             include "../features/getGames.php";
             foreach ($name as $x) {
@@ -13,7 +13,7 @@
         ?>        
     ];
     $( "#search" ).autocomplete({
-      source: availableGames
+      source: availablesearch
     });
   } );
   </script>
