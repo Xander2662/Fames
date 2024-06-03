@@ -7,7 +7,7 @@
     var availablesearch = [
         <?php
             include "../features/getGames.php";
-            foreach ($x as $name) {
+            foreach ($name as $x) {
                 echo "\"$x\",";
               }
         ?>        
