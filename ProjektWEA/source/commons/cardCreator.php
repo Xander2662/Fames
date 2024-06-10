@@ -19,7 +19,7 @@
             <div class="home">
             <div class="card">
                 
-            <form action="check.php" method="POST">  
+            <form action="../features/check.php" method="POST">  
               <input class="title" name="title" type="text" required>
               <div class="like"></div>
               <div class="gem"></div><canvas id="myCanvas" width="720" height="1050"></canvas>
