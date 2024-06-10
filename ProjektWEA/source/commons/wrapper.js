@@ -25,7 +25,7 @@ const canvas = document.getElementById('myCanvas');
       imageObj.onload = function() {
           context.drawImage(imageObj,0,0);
           var data = canvas.toDataURL("image/jpeg");
-          //document.getElementById("download").href =data;
+          document.getElementById("GO/JOVER").value =data;
           console.log(imageObj.naturalWidth);
        console.log(imageObj.naturalHeight);
        document.getElementById('x').setAttribute("min",-imageObj.naturalWidth+720);
@@ -35,14 +35,14 @@ const canvas = document.getElementById('myCanvas');
  
   document.getElementById("x").oninput = function() {
     var data = canvas.toDataURL("image/jpeg");
-    //document.getElementById("download").href =data;
+    document.getElementById("GO/JOVER").value =data;
     x=this.value;
     console.log(  document.getElementById("games").value);
    context.drawImage(imageObj,x,y);
   }
   document.getElementById("y").oninput = function() {
     var data = canvas.toDataURL("image/jpeg");
-    //document.getElementById("download").href =data;
+    document.getElementById("GO/JOVER").value =data;
     y=this.value;
    context.drawImage(imageObj,x,y);
   }

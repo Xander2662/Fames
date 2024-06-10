@@ -31,20 +31,23 @@
   } );
   </script>
             <div class="home">
-            <div class="card">  
-              <input class="title" type="text">
+            <div class="card">
+                
+            <form action="check.php" method="POST">  
+              <input class="title" name="title" type="text">
               <div class="like"></div>
               <div class="gem"></div><canvas id="myCanvas" width="720" height="1050"></canvas>
-              <textarea class="text"></textarea>
+              <textarea name="text" class="text"></textarea>
+              <input id="GO/JOVER" style="display:none" name="obrazek" type="text">
             </div>
-            
+        
             <div class="inputs">
-                <input id="obrazek" type="file" accept="image/png, image/jpeg" />
+                <input id="obrazek"  type="file" accept="image/png, image/jpeg" />
                 <input type="range"  max="0" value="0" class="slider-square" id="x">
                 <input type="range"  max="0" value="0" class="slider-square"style="margin-bottom: 20px;" id="y"><label style="color:white;"  for="tags">Card set: </label>  
-                <input id="games">
-                <input type="button" value="submit">
-
+                <input name="cardSet" id="games">
+                <input type="submit" value="submit">
+            </form>
             </div>   
             </div>
         </div>

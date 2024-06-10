@@ -98,7 +98,7 @@ canvas{
 textarea.text
 {   
 
-    height: 15%;
+    height: 200px;
     width: 90%;
     margin-left: 5%;
     border: 2px red solid;
