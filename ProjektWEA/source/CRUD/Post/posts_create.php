@@ -1,8 +1,9 @@
-
 <?php
-if($_SESSION['User'] -> getPermission()===1) {
+include_once ("../../features/User.php");
+session_start();
+if ($_SESSION['User']->getPermission() === 1) {
     header("../../commons/index.php");
-    }
+}
 require '../../features/sql_ifs.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,11 +30,13 @@ $result_games = mysqli_query($con, $sql_games);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Post</title>
 </head>
+
 <body>
     <h1>Create Post</h1>
     <form action="posts_create.php" method="POST">
@@ -56,4 +59,5 @@ $result_games = mysqli_query($con, $sql_games);
         <input type="submit" value="Create">
     </form>
 </body>
+
 </html>

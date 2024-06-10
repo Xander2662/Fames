@@ -1,4 +1,6 @@
 <?php
+include_once ("../../features/User.php");
+session_start();
 if ($_SESSION['User']->getPermission() === 1 || !isset($_SESSION['User'])) {
     header("../../commons/index.php");
 }
