@@ -24,7 +24,6 @@ $result = mysqli_query($con, $sql);
     <?php while ($post = mysqli_fetch_assoc($result)): ?>
         <div>
             <h3><?php echo htmlspecialchars($post['text']); ?></h3>
-            <p>Image: <?php echo htmlspecialchars($post['img_ref']); ?></p>
             <p>User: <?php echo htmlspecialchars($post['username']); ?></p>
             <p>Game: <?php echo htmlspecialchars($post['game_name']); ?></p>
             <p>Likes: <?php echo htmlspecialchars($post['sumlikes']); ?></p>

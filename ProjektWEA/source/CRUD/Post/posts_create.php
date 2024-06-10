@@ -8,11 +8,10 @@ require '../../features/sql_ifs.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $text = validate($_POST['text']);
-    $img_ref = validate($_POST['img_ref']);
     $user_id = validate($_POST['user_id']);
     $game_id = validate($_POST['game_id']);
 
-    $sql = "INSERT INTO Posts (text, img_ref, user_id, game_id) VALUES ('$text', '$img_ref', '$user_id', '$game_id')";
+    $sql = "INSERT INTO Posts (text, user_id, game_id) VALUES ('$text', '$user_id', '$game_id')";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -42,8 +41,6 @@ $result_games = mysqli_query($con, $sql_games);
     <form action="posts_create.php" method="POST">
         <label for="text">Text:</label><br>
         <textarea id="text" name="text" required></textarea><br>
-        <label for="img_ref">Image Reference:</label><br>
-        <input type="text" id="img_ref" name="img_ref"><br>
         <label for="user_id">User:</label><br>
         <select id="user_id" name="user_id" required>
             <?php while ($user = mysqli_fetch_assoc($result_users)): ?>
