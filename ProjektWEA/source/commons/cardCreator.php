@@ -34,18 +34,18 @@
             <div class="card">
                 
             <form action="check.php" method="POST">  
-              <input class="title" name="title" type="text">
+              <input class="title" name="title" type="text" required>
               <div class="like"></div>
               <div class="gem"></div><canvas id="myCanvas" width="720" height="1050"></canvas>
               <textarea name="text" class="text"></textarea>
-              <input id="GO/JOVER" style="display:none" name="obrazek" type="text">
+              <input id="GO/JOVER" style="display:none" name="obrazek" type="text" required>
             </div>
         
             <div class="inputs">
                 <input id="obrazek"  type="file" accept="image/png, image/jpeg" />
                 <input type="range"  max="0" value="0" class="slider-square" id="x">
                 <input type="range"  max="0" value="0" class="slider-square"style="margin-bottom: 20px;" id="y"><label style="color:white;"  for="tags">Card set: </label>  
-                <input name="cardSet" id="games">
+                <input name="cardSet" id="games" required>
                 <input type="submit" value="submit">
             </form>
             </div>   
