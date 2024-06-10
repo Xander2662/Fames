@@ -11,6 +11,7 @@ for(var i=1;i<=8;i++)
 
 $(".card").dblclick(function(){
   $(this).hide();
+  console.log(this.id);
 });
 });
 </script>

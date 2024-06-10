@@ -25,12 +25,9 @@ session_start();
                 <h1>WELCOME TO FAMES</h1>
                 <p>Tu muzem napsat nejaky text voleee</p>
             </div>
-
-            <!-----------------------------------
-                *      Zde si muzes vlozit ty       *
-                *      herni karty podle sebe       *                                   
-                ------------------------------------>
-
+            <?php
+    include "./card.php";
+    ?>
         </div>
     </div>
 
