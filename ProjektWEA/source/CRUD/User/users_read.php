@@ -1,17 +1,18 @@
-
 <?php
 require '../../features/sql_ifs.php';
 
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM Users";
 $result = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Read Users</title>
 </head>
+
 <body>
     <h1>Users</h1>
     <?php while ($user = mysqli_fetch_assoc($result)): ?>
@@ -25,4 +26,5 @@ $result = mysqli_query($con, $sql);
     <?php endwhile; ?>
     <a href="users_create.php">Create New User</a>
 </body>
+
 </html>

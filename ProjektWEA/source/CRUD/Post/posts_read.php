@@ -5,9 +5,9 @@ if($_SESSION['User'] -> getPermission()===1) {
     }
 require '../../features/sql_ifs.php';
 
-$sql = "SELECT posts.*, users.username, games.name AS game_name FROM posts
-        JOIN users ON posts.user_id = users.idUsers
-        JOIN games ON posts.game_id = games.idGames";
+$sql = "SELECT Posts.*, users.username, games.name AS game_name FROM Posts
+        JOIN Users ON posts.user_id = users.idUsers
+        JOIN Games ON posts.game_id = games.idGames";
 $result = mysqli_query($con, $sql);
 ?>
 <!DOCTYPE html>

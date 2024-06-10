@@ -1,13 +1,12 @@
-
 <?php
-if($_SESSION['User'] -> getPermission()===1) {
+if ($_SESSION['User']->getPermission() === 1) {
     header("../../commons/index.php");
-    }
+}
 require '../../features/sql_ifs.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM games WHERE idGames = $id";
+    $sql = "SELECT * FROM Games WHERE idGames = $id";
     $result = mysqli_query($con, $sql);
     $game = mysqli_fetch_assoc($result);
 
@@ -22,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $info = validate($_POST['info']);
     $color = validate($_POST['color']);
 
-    $sql = "UPDATE games SET name='$name', info='$info', color='$color' WHERE idGames=$id";
+    $sql = "UPDATE Games SET name='$name', info='$info', color='$color' WHERE idGames=$id";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -34,11 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Game</title>
 </head>
+
 <body>
     <h1>Edit Game</h1>
     <form action="games_edit.php" method="POST">
@@ -52,4 +53,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Update">
     </form>
 </body>
+
 </html>

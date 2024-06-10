@@ -1,7 +1,6 @@
-
 <?php
-if($_SESSION['User'] -> getPermission()===1) {
-header("../../commons/index.php");
+if ($_SESSION['User']->getPermission() === 1 || !isset($_SESSION['User'])) {
+    header("../../commons/index.php");
 }
 require '../../features/sql_ifs.php';
 
@@ -10,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $info = validate($_POST['info']);
     $color = validate($_POST['color']);
 
-    $sql = "INSERT INTO games (name, info, color) VALUES ('$name', '$info', '$color')";
+    $sql = "INSERT INTO Games (name, info, color) VALUES ('$name', '$info', '$color')";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -22,11 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Game</title>
 </head>
+
 <body>
     <h1>Create Game</h1>
     <form action="games_create.php" method="POST">
@@ -39,4 +40,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <input type="submit" value="Create">
     </form>
 </body>
+
 </html>

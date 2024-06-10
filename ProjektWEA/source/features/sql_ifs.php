@@ -31,14 +31,20 @@ function validate($data)
 // $db_password = "tmxPsqW2";
 // $db_name = "d93646_wrubel";
 
-$db_site = "localhost";
-$db_user = "root";
-$db_password = "";
-$db_name = "fashion_in_games";
+// $db_site = "localhost";
+// $db_user = "root";
+// $db_password = "";
+// $db_name = "fashion_in_games";
+
+
+$db_site = "mysql-e00995a82b810debc80b8fe8b224ea51.alwaysdata.net";
+$db_user = "363131";
+$db_password = "On74865288362";
+$db_name = "e00995a82b810debc80b8fe8b224ea51_fashion_in_games";
 
 $con = mysqli_connect($db_site, $db_user, $db_password, $db_name);
 
 if (!$con) {
   header("Location: ../commons/index.php?err=databáze nebyla připojena");
-}
+} 
 ?>

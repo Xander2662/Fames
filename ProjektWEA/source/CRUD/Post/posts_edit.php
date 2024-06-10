@@ -7,7 +7,7 @@ require '../../features/sql_ifs.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM posts WHERE idPost = $id";
+    $sql = "SELECT * FROM Posts WHERE idPost = $id";
     $result = mysqli_query($con, $sql);
     $post = mysqli_fetch_assoc($result);
 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = validate($_POST['user_id']);
     $game_id = validate($_POST['game_id']);
 
-    $sql = "UPDATE posts SET text='$text', img_ref='$img_ref', user_id='$user_id', game_id='$game_id' WHERE idPost=$id";
+    $sql = "UPDATE Posts SET text='$text', img_ref='$img_ref', user_id='$user_id', game_id='$game_id' WHERE idPost=$id";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -33,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql_users = "SELECT * FROM users";
+$sql_users = "SELECT * FROM Users";
 $result_users = mysqli_query($con, $sql_users);
 
-$sql_games = "SELECT * FROM games";
+$sql_games = "SELECT * FROM Games";
 $result_games = mysqli_query($con, $sql_games);
 ?>
 <!DOCTYPE html>

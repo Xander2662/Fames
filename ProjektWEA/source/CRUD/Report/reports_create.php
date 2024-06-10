@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $text = validate($_POST['text']);
     $post_id = validate($_POST['post_id']);
 
-    $sql = "INSERT INTO reports (text, post_id) VALUES ('$text', '$post_id')";
+    $sql = "INSERT INTO Reports (text, post_id) VALUES ('$text', '$post_id')";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql_posts = "SELECT * FROM posts";
+$sql_posts = "SELECT * FROM Posts";
 $result_posts = mysqli_query($con, $sql_posts);
 ?>
 <!DOCTYPE html>

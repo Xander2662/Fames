@@ -5,7 +5,7 @@ require '../../features/sql_ifs.php';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    $sql = "DELETE FROM reports WHERE idReport = $id";
+    $sql = "DELETE FROM Reports WHERE idReport = $id";
     $result = mysqli_query($con, $sql);
 
     if ($result) {

@@ -11,7 +11,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['repe
         exit();
     } else if (empty($password)) {
         header("Location: ../commons/login.php?err=To jakože chceš mít učet bez hesla?");
-        exit(); 
+        exit();
     } else if (empty($repeat_password)) {
         header("Location: ../commons/login.php?err=Musíte znovu napsat vaše heslo...");
         exit();
@@ -22,7 +22,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['repe
         header("Location: ../commons/login.php?err=Nezadal si email xd");
         exit();
     } else {
-        $sql = "SELECT * FROM users WHERE username = '$username'";
+        $sql = "SELECT * FROM Users WHERE username = '$username'";
 
         $result = mysqli_query($con, $sql);
 
@@ -37,7 +37,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['repe
 
             $password = md5($password);
 
-            $sql1 = "INSERT INTO users (username,password,email,permission)VALUES('$username', '$password','$email',1)";
+            $sql1 = "INSERT INTO Users (username,password,email,permission)VALUES('$username', '$password','$email',1)";
 
             $result1 = mysqli_query($con, $sql1);
 

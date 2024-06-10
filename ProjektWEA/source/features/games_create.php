@@ -1,35 +1,34 @@
 <?php
-include('sql_ifs.php');
+include ('sql_ifs.php');
 $name = validate($_POST['name']);
 $color = validate($_POST['color']);
 $info = validate($_POST['info']);
 $result = mysqli_query($con, $sql);
-if(empty($name)){
-   exit();
-}else if(empty($color)){
-        exit();
-}
-else {
-    $sql = "SELECT * FROM games WHERE name = '$name'"; 
+if (empty($name)) {
+    exit();
+} else if (empty($color)) {
+    exit();
+} else {
+    $sql = "SELECT * FROM Games WHERE name = '$name'";
 
     $result = mysqli_query($con, $sql);
 
-    if(mysqli_num_rows($result) > 0){
+    if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        if($row['name'] === $name){
+        if ($row['name'] === $name) {
             exit();
         }
-    }else{
-        $sql1 = "INSERT INTO games (name,color,info)VALUES('$name', '$color','$info')";
+    } else {
+        $sql1 = "INSERT INTO Games (name,color,info)VALUES('$name', '$color','$info')";
 
         $result1 = mysqli_query($con, $sql1);
 
-        if($result1){
+        if ($result1) {
             header("Location: games_create.php?vyt=Hra vytvořena");
             exit();
-        }else{
+        } else {
             header("Location: games_create.php?err=error");
-           exit();
+            exit();
         }
     }
 }

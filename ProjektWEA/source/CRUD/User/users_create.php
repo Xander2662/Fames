@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = validate($_POST['email']);
     $permission = validate($_POST['permission']);
 
-    $sql = "INSERT INTO users (username, password, email, permission) VALUES ('$username', '$password', '$email', '$permission')";
+    $sql = "INSERT INTO Users (username, password, email, permission) VALUES ('$username', '$password', '$email', '$permission')";
     $result = mysqli_query($con, $sql);
 
     if ($result) {

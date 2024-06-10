@@ -3,21 +3,21 @@
 <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
 <script>
-  $( function() {
-    var availablesearch = [
-        <?php
+    $(function () {
+        var availablesearch = [
+            <?php
             include "/../features/getGames.php";
             foreach ($name as $x) {
                 echo "\"$x\",";
-              }
-        ?>        
-    ];
+            }
+            ?>        
+];
     $( "#search" ).autocomplete({
       source: availablesearch
     });
   } );
   </script>
-<link rel="stylesheet" href="/../assets/header.css">
+<link rel="stylesheet" href="../assets/header.css">
 <nav>
     <a class="logo" href="index.php">Fames</a>
     <form>
@@ -26,8 +26,9 @@
             <input class="search-input" type="search" id="search" placeholder="Search">
         </div>
     </form>
-    <?php 
-    if(isset($_SESSION["User"]))    echo'
+    <?php
+    if (isset($_SESSION["User"]))
+        echo '
     <ul style="text-align: left;">
     
         <li><a href="#">My collection</a></li>
@@ -66,11 +67,11 @@
                 <img src="../../public/logout.png">
                 <p>Logout</p>
             </a>';
-            if($_SESSION['User'] -> getPermission()==0) {
-                echo '<hr><a href="../CRUD/admin_panel.php" class="sub-menu-link">
+                if ($_SESSION['User']->getPermission() == 0) {
+                    echo '<hr><a href="../CRUD/admin_panel.php" class="sub-menu-link">
                 <p>Admin panel :)</p>
             </a>';
-            }
+                }
             } else
                 echo '<a href="login.php" class="sub-menu-link">
                 <img src="../../public/logout.png">

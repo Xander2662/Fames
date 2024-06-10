@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_id = validate($_POST['user_id']);
     $game_id = validate($_POST['game_id']);
 
-    $sql = "INSERT INTO posts (text, img_ref, user_id, game_id) VALUES ('$text', '$img_ref', '$user_id', '$game_id')";
+    $sql = "INSERT INTO Posts (text, img_ref, user_id, game_id) VALUES ('$text', '$img_ref', '$user_id', '$game_id')";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -21,10 +21,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql_users = "SELECT * FROM users";
+$sql_users = "SELECT * FROM Users";
 $result_users = mysqli_query($con, $sql_users);
 
-$sql_games = "SELECT * FROM games";
+$sql_games = "SELECT * FROM Games";
 $result_games = mysqli_query($con, $sql_games);
 ?>
 <!DOCTYPE html>

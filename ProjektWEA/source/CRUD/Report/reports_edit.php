@@ -4,7 +4,7 @@ require '../../features/sql_ifs.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    $sql = "SELECT * FROM reports WHERE idReport = $id";
+    $sql = "SELECT * FROM Reports WHERE idReport = $id";
     $result = mysqli_query($con, $sql);
     $report = mysqli_fetch_assoc($result);
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $text = validate($_POST['text']);
     $post_id = validate($_POST['post_id']);
 
-    $sql = "UPDATE reports SET text='$text', post_id='$post_id' WHERE idReport=$id";
+    $sql = "UPDATE Reports SET text='$text', post_id='$post_id' WHERE idReport=$id";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$sql_posts = "SELECT * FROM posts";
+$sql_posts = "SELECT * FROM Posts";
 $result_posts = mysqli_query($con, $sql_posts);
 ?>
 <!DOCTYPE html>
