@@ -142,3 +142,8 @@
     float: right;
     margin-right: 2%;
 }
+
+.liked
+{
+    background-color: rgb(189, 32, 32);
+}
