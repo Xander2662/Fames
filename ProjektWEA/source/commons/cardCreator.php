@@ -16,20 +16,6 @@
     <body>
         <div class="hero">
         <?php include 'header.php' ?>
-<script>
-  $( function() {
-    var availableGames = [
-        <?php
-            foreach ($name as $x) {
-                echo "\"$x\",";
-              }
-        ?>        
-    ];
-    $( "#games" ).autocomplete({
-      source: availableGames
-    });
-  } );
-  </script>
             <div class="home">
             <div class="card">
                 
@@ -45,7 +31,15 @@
                 <input id="obrazek"  type="file" accept="image/png, image/jpeg" />
                 <input type="range"  max="0" value="0" class="slider-square" id="x">
                 <input type="range"  max="0" value="0" class="slider-square"style="margin-bottom: 20px;" id="y"><label style="color:white;"  for="tags">Card set: </label>  
-                <input name="cardSet" id="games" required>
+                <select name="cardset" id="cardset" required>
+                <?php
+                include "../features/getGames.php";
+
+            for($i=0;$i<sizeof($id);$i++) {
+                echo "<option value='".$id[$i]."'>".$name[$i]."</option>";
+            }
+            ?>   
+                </select>
                 <input type="submit" value="submit">
             </form>
             </div>   
