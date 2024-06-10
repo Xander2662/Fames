@@ -6,7 +6,7 @@
   $( function() {
     var availablesearch = [
         <?php
-            include "../features/getGames.php";
+            include "/../features/getGames.php";
             foreach ($name as $x) {
                 echo "\"$x\",";
               }
@@ -17,7 +17,7 @@
     });
   } );
   </script>
-<link rel="stylesheet" href="../assets/header.css">
+<link rel="stylesheet" href="/../assets/header.css">
 <nav>
     <a class="logo" href="index.php">Fames</a>
     <form>

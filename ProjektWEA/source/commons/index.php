@@ -1,5 +1,5 @@
 <?php
-include_once ("../features/User.php");
+include_once ("/../features/User.php");
 session_start();
 ?>
 
@@ -11,8 +11,8 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="../assets/index.css">
-    <link rel="stylesheet" href="../assets/cardstyle.css">
+    <link rel="stylesheet" href="/../assets/index.css">
+    <link rel="stylesheet" href="/../assets/cardstyle.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
@@ -43,7 +43,7 @@ session_start();
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <?php
-    include "../features/cardIN.php";
+    include "/../features/cardIN.php";
     ?>
 </body>
 
