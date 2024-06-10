@@ -28,15 +28,17 @@
         </div>
 
         <div class="inputs">
+            <form action="check.php" method="POST">
         <label style="color:white;">Border:</label>
-        <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" id="r">
-        <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" id="g">
-        <input style="margin-bottom:20px;" type="range" min="0" max="255" value="0" class="slider-square" id="b">
+        <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" name="r" id="r">
+        <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" name="g" id="g">
+        <input style="margin-bottom:20px;" type="range" min="0" max="255" value="0" class="slider-square" name="b" id="b">
         <label style="color:white;">Background:</label>
-        <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" id="r1">
-        <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" id="g1">
-        <input type="range" min="0" max="255" value="0" class="slider-square" id="b1">
-        <input type="button" value="submit">
+        <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" name="r1" id="r1">
+        <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" name="g1" id="g1">
+        <input type="range" min="0" max="255" value="0" class="slider-square" name="b1" id="b1">
+        <input type="submit" value="submit">
+        <form>
             </div>   
 
         </div>
