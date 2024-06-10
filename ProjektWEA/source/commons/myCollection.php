@@ -24,6 +24,7 @@ session_start();
             <div class="intro">
                 <h1>MY COLLECTION</h1>
                 <p>Here are your posts</p>
+                <a href="./cardCreator"> Vytvoř novou kartu</a>
             </div>
             <?php
             $_SESSION['User']->displayFeed();
