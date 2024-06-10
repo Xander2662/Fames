@@ -15,7 +15,6 @@ class User
         $this->username = $username;
         $this->permission = $permission;
         $this->feedItems = [];
-        $this->fetchFeedItems();
     }
 
     // Getter for username
@@ -58,11 +57,11 @@ class User
         $sql = "SELECT p.sumlikes,p.idPost,p.text,p.popis, g.name as gameName, g.color as gameColor FROM Post p inner join Games g on p.Games_idGames = g.idGames WHERE Users_idusers = '$this->userId'";
         $result = mysqli_query($con, $sql);
 
-
+        var_dump($this->feedItems[]);
         for ($i = 1; $i <= mysqli_num_rows($result); $i++) {
             $row = mysqli_fetch_array($result);
             $this->feedItems[] = $row;
-          }
+        }
     }
 
     public function addFeedItem($item)
@@ -77,6 +76,7 @@ class User
 
     public function displayFeed()
     {
+        $this->fetchFeedItems();
         foreach ($this->feedItems as $item) {
             $likes = $item['sumlikes'];
             $id = $item['idPost'];
