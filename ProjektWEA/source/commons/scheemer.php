@@ -29,6 +29,8 @@
 
         <div class="inputs">
             <form action="check.php" method="POST">
+            <label style="color:white;">Cardset:</label>
+            <input type="text" name="CardSet">
         <label style="color:white;">Border:</label>
         <input style=" accent-color: red;" type="range"  min="0" max="255" value="0" class="slider-square" name="r" id="r">
         <input style=" accent-color: green;" type="range"  min="0" max="255" value="0" class="slider-square" name="g" id="g">
