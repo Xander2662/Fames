@@ -21,11 +21,10 @@ if (isset($_GET['id'])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $id = $_POST['id'];
     $text = validate($_POST['text']);
-    $img_ref = validate($_POST['img_ref']);
     $user_id = validate($_POST['user_id']);
     $game_id = validate($_POST['game_id']);
 
-    $sql = "UPDATE Posts SET text='$text', img_ref='$img_ref', user_id='$user_id', game_id='$game_id' WHERE idPost=$id";
+    $sql = "UPDATE Posts SET text='$text', user_id='$user_id', game_id='$game_id' WHERE idPost=$id";
     $result = mysqli_query($con, $sql);
 
     if ($result) {
@@ -54,8 +53,6 @@ $result_games = mysqli_query($con, $sql_games);
         <input type="hidden" name="id" value="<?php echo $post['idPost']; ?>">
         <label for="text">Text:</label><br>
         <textarea id="text" name="text" required><?php echo htmlspecialchars($post['text']); ?></textarea><br>
-        <label for="img_ref">Image Reference:</label><br>
-        <input type="text" id="img_ref" name="img_ref" value="<?php echo htmlspecialchars($post['img_ref']); ?>"><br>
         <label for="user_id">User:</label><br>
         <select id="user_id" name="user_id" required>
             <?php while ($user = mysqli_fetch_assoc($result_users)): ?>
