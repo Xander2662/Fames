@@ -15,7 +15,7 @@
     
     <body>
         <div class="hero">
-        <?php include 'header.php' ?>
+        <?php // include 'header.php' ?>
             <div class="home">
             <div class="card">
                 
@@ -35,7 +35,7 @@
                 <?php
                 include "../features/getGames.php";
 
-            for($i=0;$i<sizeof($id);$i++) {
+            for($i=1;$i<=sizeof($id);$i++) {
                 echo "<option value='".$id[$i]."'>".$name[$i]."</option>";
             }
             ?>   

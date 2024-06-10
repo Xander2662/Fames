@@ -1,3 +1,8 @@
+<?php
+include_once ("../features/User.php");
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

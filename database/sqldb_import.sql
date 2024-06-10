@@ -6,12 +6,12 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- Table `Users`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Users` (
-  `idusers` INT NOT NULL AUTO_INCREMENT,
+  `idUsers` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `password` VARCHAR(45) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `permission` INT NOT NULL,
-  PRIMARY KEY (`idusers`));
+  PRIMARY KEY (`idUsers`));
 
 -- -----------------------------------------------------
 -- Table `Games`
@@ -32,14 +32,14 @@ CREATE TABLE IF NOT EXISTS `Post` (
   `text` VARCHAR(255) NOT NULL,
   `Img_ref` VARCHAR(255) NOT NULL,
   `sumlikes` INT NOT NULL,
-  `Users_idusers` INT NOT NULL,
+  `Users_idUsers` INT NOT NULL,
   `Games_idGames` INT NOT NULL,
   PRIMARY KEY (`idPost`),
-  INDEX `fk_Post_Users1_idx` (`Users_idusers` ASC),
+  INDEX `fk_Post_Users1_idx` (`Users_idUsers` ASC),
   INDEX `fk_Post_Games1_idx` (`Games_idGames` ASC),
   CONSTRAINT `fk_Post_Users1`
-    FOREIGN KEY (`Users_idusers`)
-    REFERENCES `Users` (`idusers`)
+    FOREIGN KEY (`Users_idUsers`)
+    REFERENCES `Users` (`idUsers`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Post_Games1`
@@ -69,17 +69,17 @@ CREATE TABLE IF NOT EXISTS `Report` (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Likes` (
   `Post_idPost` INT NOT NULL,
-  `Users_idusers` INT NOT NULL,
+  `Users_idUsers` INT NOT NULL,
   INDEX `fk_Likes_Post_idx` (`Post_idPost` ASC),
-  INDEX `fk_Likes_Users1_idx` (`Users_idusers` ASC),
+  INDEX `fk_Likes_Users1_idx` (`Users_idUsers` ASC),
   CONSTRAINT `fk_Likes_Post`
     FOREIGN KEY (`Post_idPost`)
     REFERENCES `Post` (`idPost`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Likes_Users1`
-    FOREIGN KEY (`Users_idusers`)
-    REFERENCES `Users` (`idusers`)
+    FOREIGN KEY (`Users_idUsers`)
+    REFERENCES `Users` (`idUsers`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 

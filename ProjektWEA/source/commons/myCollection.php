@@ -22,11 +22,11 @@ session_start();
         <?php include 'header.php' ?>
         <div class="home" id="pole">
             <div class="intro">
-                <h1>WELCOME TO FAMES</h1>
-                <p>Here are famous posts!</p>
+                <h1>MY COLLECTION</h1>
+                <p>Here are your posts</p>
             </div>
             <?php
-            include "./card.php";
+            $_SESSION['User']->displayFeed();
             ?>
         </div>
     </div>
@@ -42,9 +42,6 @@ session_start();
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <?php
-    include "../features/cardIN.php";
-    ?>
 </body>
 
 </html>

@@ -6,7 +6,7 @@
     $(function () {
         var availablesearch = [
             <?php
-            include "/../features/getGames.php";
+            include "../features/getGames.php";
             foreach ($name as $x) {
                 echo "\"$x\",";
             }
@@ -28,15 +28,13 @@
     </form>
     <?php
     if (isset($_SESSION["User"]))
-        echo '
-    <ul style="text-align: left;">
-    
-        <li><a href="#">My collection</a></li>
-    </ul>';
+        echo '<ul style="text-align: left;">
+        <li><a href="myCollection.php">My collection</a></li>
+    </ul>'; 
     ?>
     <ul style="text-align: right;">
 
-        <li><a href="aboutus.php">About us</a></li>
+        <li><a href="aboutUs.php">About us</a></li>
         <li><a href="support.php">Support</a></li>
     </ul>
 
@@ -59,11 +57,7 @@
             <hr>
             <?php
             if (isset($_SESSION["User"])) {
-                echo '<a href="#" class="sub-menu-link">
-                <img src="../../public/settings.png">
-                <p>Settings</p>
-            </a>    
-            <a href="../features/logout_ifs.php" class="sub-menu-link">
+                echo '<a href="../features/logout_ifs.php" class="sub-menu-link">
                 <img src="../../public/logout.png">
                 <p>Logout</p>
             </a>';

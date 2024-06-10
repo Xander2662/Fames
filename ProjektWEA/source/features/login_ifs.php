@@ -1,5 +1,5 @@
 <?php
-include ('sql_ifs.php');
+include 'sql_ifs.php';
 $text = mysqli_real_escape_string($con, $_POST["text"]); //username or email
 $password = mysqli_real_escape_string($con, $_POST["password"]);
 $sql = "SELECT * FROM Users WHERE username = '$text' OR email = '$text'";
