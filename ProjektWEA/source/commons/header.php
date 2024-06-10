@@ -36,8 +36,8 @@
     ?>
     <ul style="text-align: right;">
 
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Support</a></li>
+        <li><a href="aboutus.php">About us</a></li>
+        <li><a href="support.php">Support</a></li>
     </ul>
 
     <img src="../../public/user.png" class="user-pic" onclick="toggleMenu()">
