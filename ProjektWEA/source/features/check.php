@@ -15,4 +15,6 @@ $sql = "SELECT idPost FROM Post WHERE Users_idusers = '$user_id' ORDER BY idPost
 $result = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($result);
 
-file_put_contents("../../public/usrimg/".$row['idPost'].".jpeg", file_get_contents($_POST["obrazek"]));
+file_put_contents("../../public/usrimg/" . $row['idPost'] . ".jpeg", file_get_contents($_POST["obrazek"]));
+Header("Location: ../commons/index.php");
+?>

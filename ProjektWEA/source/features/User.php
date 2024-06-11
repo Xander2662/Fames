@@ -57,9 +57,9 @@ class User
         $sql = "SELECT p.sumlikes,p.idPost,p.text,p.popis, g.name as gameName, g.color as gameColor FROM Post p inner join Games g on p.Games_idGames = g.idGames WHERE Users_idusers = '$this->userId'";
         $result = mysqli_query($con, $sql);
 
-        var_dump($this->feedItems[]);
-        for ($i = 1; $i <= mysqli_num_rows($result); $i++) {
-            $row = mysqli_fetch_array($result);
+        unset($this->feedItems);
+
+        while ($row = mysqli_fetch_array($result)) {
             $this->feedItems[] = $row;
         }
     }
