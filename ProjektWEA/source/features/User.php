@@ -64,16 +64,6 @@ class User
         }
     }
 
-    public function addFeedItem($item)
-    {
-
-    }
-
-    public function removeFeedItem($itemId)
-    {
-
-    }
-
     public function displayFeed()
     {
         $this->fetchFeedItems();
