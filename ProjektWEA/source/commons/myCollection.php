@@ -27,10 +27,9 @@ if (!isset($_SESSION["User"])) {
             <div class="intro">
                 <h1>MY COLLECTION</h1>
                 <p>Here are your posts</p>
-                <a href="./cardCreator.php"> Vytvoř novou kartu</a>
             </div>
             <?php
-            include'../features/cardPlus.php';
+            include '../features/cardPlus.php';
             $_SESSION['User']->displayFeed();
             ?>
         </div>

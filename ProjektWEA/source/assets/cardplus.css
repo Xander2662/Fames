@@ -1,0 +1,19 @@
+.create-plus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(58, 58, 58);
+  border: 2px dashed rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.create-plus-content {
+  text-align: center;
+  font-size: 1.5em;
+  color: whitesmoke;
+}
+
+.create-plus:hover {
+  background-color: rgb(77, 77, 77);
+  border-color: rgba(0, 0, 0, 0.5);
+}
