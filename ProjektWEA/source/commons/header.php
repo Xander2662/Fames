@@ -78,11 +78,13 @@
 
 </nav>
 <script>
+    $(document).ready(function(){
 $(".card").dblclick(function(){
   console.log(this.id);
   this.children[1].classList.toggle("liked");
   if(this.children[1].classList.contains("liked"))this.children[1].children[0].textContent=parseInt(this.children[1].children[0].textContent)+1;
   else this.children[1].children[0].textContent=parseInt(this.children[1].children[0].textContent)-1;
 });
-});
+    })
+
 </script>
