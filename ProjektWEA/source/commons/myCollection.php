@@ -30,6 +30,7 @@ if (!isset($_SESSION["User"])) {
                 <a href="./cardCreator.php"> Vytvoř novou kartu</a>
             </div>
             <?php
+            include'../features/cardPlus.php';
             $_SESSION['User']->displayFeed();
             ?>
         </div>
