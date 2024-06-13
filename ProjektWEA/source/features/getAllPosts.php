@@ -1,12 +1,6 @@
 <?php
 include_once ("User.php");
-
-$db_site = "mysql-e00995a82b810debc80b8fe8b224ea51.alwaysdata.net";
-$db_user = "363131";
-$db_password = "On74865288362";
-$db_name = "e00995a82b810debc80b8fe8b224ea51_fashion_in_games";
-
-$con = mysqli_connect($db_site, $db_user, $db_password, $db_name);
+require_once ("sql_ifs.php");
 
 $sql = "SELECT p.sumlikes,p.idPost,p.text,p.popis, g.name as gameName, g.color as gameColor, u.username as userName FROM Post p inner join Games g on p.Games_idGames = g.idGames, Users u WHERE p.Users_idusers = u.idUsers";
 $result = mysqli_query($con, $sql);

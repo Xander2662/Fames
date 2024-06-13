@@ -45,7 +45,7 @@ class User
     }
 
     // Method to fetch feed items from the database
-    private function fetchFeedItems()
+    public function fetchFeedItems()
     {
         $db_site = "mysql-e00995a82b810debc80b8fe8b224ea51.alwaysdata.net";
         $db_user = "363131";
@@ -56,21 +56,22 @@ class User
 
         $sql = "SELECT p.sumlikes,p.idPost,p.text,p.popis, g.name as gameName, g.color as gameColor FROM Post p inner join Games g on p.Games_idGames = g.idGames WHERE Users_idusers = '$this->userId'";
         $result = mysqli_query($con, $sql);
+        if (mysqli_num_rows($result) > 0) {
+            unset($this->feedItems);
 
-        unset($this->feedItems);
-
-        while ($row = mysqli_fetch_array($result)) {
-            $this->feedItems[] = $row;
+            while ($row = mysqli_fetch_array($result)) {
+                $this->feedItems[] = $row;
+            }
+            $this->displayFeed();
         }
     }
 
     public function displayFeed()
     {
-        $this->fetchFeedItems();
         foreach ($this->feedItems as $item) {
             $likes = $item['sumlikes'];
             $id = $item['idPost'];
-            $user = $this->username;  // Assuming the username is part of the User object
+            $user = $this->username;
             $gameName = $item['gameName'];
             $title = $item['text'];
             $popis = $item['popis'];
@@ -98,4 +99,3 @@ class User
         }
     }
 }
-?>

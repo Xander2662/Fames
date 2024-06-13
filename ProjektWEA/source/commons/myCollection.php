@@ -30,7 +30,7 @@ if (!isset($_SESSION["User"])) {
             </div>
             <?php
             include '../features/cardPlus.php';
-            $_SESSION['User']->displayFeed();
+            $_SESSION['User']->fetchFeedItems();
             ?>
         </div>
     </div>
