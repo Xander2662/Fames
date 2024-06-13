@@ -110,6 +110,8 @@ nav ul li a:hover::after {
 .sub-menu {
   padding: 20px;
   margin: 10px;
+  background-color: #3e3e41;
+  border-radius: 10px;
 }
 
 .user-info {

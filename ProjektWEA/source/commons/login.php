@@ -1,7 +1,7 @@
 <?php
 include_once ("../features/User.php");
 session_start();
-if(isset($_SESSION["User"])) {
+if (isset($_SESSION["User"])) {
     header("Location: index.php");
 }
 ?>
@@ -23,10 +23,9 @@ if(isset($_SESSION["User"])) {
     <div class="hero">
         <?php include 'header.php' ?>
         <?php
-                    if(isset($_GET['err'])) 
-                    {
-                    echo('<p class="mb-1 error-message" id="error-message">'.$_GET['err'].'</p>');
-                    }
+        if (isset($_GET['err'])) {
+            echo ('<p class="mb-1 error-message" id="error-message">' . $_GET['err'] . '</p>');
+        }
         ?>
         <div class="wrapper">
 
@@ -36,7 +35,7 @@ if(isset($_SESSION["User"])) {
                     <div class="input-box">
                         <span class="icon">
                             <ion-icon name="person-outline"></ion-icon>
-                        </span> 
+                        </span>
                         <input type="text" name="text" required>
                         <label>Username or email</label>
                     </div>
@@ -48,7 +47,8 @@ if(isset($_SESSION["User"])) {
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox"> Remember me</label>
+                        <label><input type="checkbox" name="checkbox">
+                            Remember me</label>
                         <a href="#">Forgot password?</a>
                     </div>
                     <button type="submit" class="btn">Login</button>

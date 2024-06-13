@@ -72,7 +72,8 @@ header {
   width: 100%;
   padding: 0 100px;
   min-height: 100vh;
-  background: url("../../../ProjektWEA/public/backgrnd.gif") no-repeat;
+  background: rgb(55,55,61);
+  background: linear-gradient(45deg, rgba(55,55,61,1) 0%, rgba(83,83,125,1) 46%, rgba(62,84,162,1) 100%);
   background-size: cover;
   background-position: center;
 }

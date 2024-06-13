@@ -2,6 +2,7 @@
 include 'sql_ifs.php';
 $text = mysqli_real_escape_string($con, $_POST["text"]); //username or email
 $password = mysqli_real_escape_string($con, $_POST["password"]);
+$remember_me = isset($_POST["checkbox"]) ? 1 : 0;
 $sql = "SELECT * FROM Users WHERE username = '$text' OR email = '$text'";
 $result = mysqli_query($con, $sql);
 
@@ -16,7 +17,8 @@ if (mysqli_num_rows($result) > 0) {
     session_start();
     $_SESSION['Logged'] = true;
     $_SESSION['User'] = new User($row['idUsers'], $row['username'], $row['permission']);
-    Header("Location: ../commons/index.php");
+    
+     Header("Location: ../commons/index.php");
   } else {
     Header("Location: ../commons/login.php?err=Špatné heslo");
   }
